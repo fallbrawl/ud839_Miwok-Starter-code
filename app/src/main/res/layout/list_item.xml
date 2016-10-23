@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        style="@style/ListImageStyle"
+        android:id="@+id/list_item_icon"
+        android:background="@color/image_background"
+        />
+    <LinearLayout
+        style="@style/ListTextsStyle"
+        android:background="@color/category_numbers">
+        <TextView
+            style="@style/ListTextTranslationStyle"
+            android:id="@+id/miwok_text_view"
+            tools:text="luffi"
+            android:layout_weight="1"/>
+        <TextView
+            style="@style/ListTextDefaultStyle"
+            android:id="@+id/default_text_view"
+            tools:text="smth"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
