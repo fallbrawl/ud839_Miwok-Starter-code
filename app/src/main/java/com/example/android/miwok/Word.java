@@ -6,6 +6,7 @@ package com.example.android.miwok;
 public class Word {
     private String defaultTranslation = "";
     private String miwokTranslation = "";
+    private boolean isImage = false;
     private int imageId = -1;
 
     public Word(String defaultTranslation,String miwokTranslation, int imageId){
