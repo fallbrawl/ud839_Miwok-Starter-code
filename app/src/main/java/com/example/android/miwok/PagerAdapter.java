@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class PagerAdapter extends FragmentPagerAdapter {
 
+    private String tabTitles[] = new String[] { "Tab1", "Tab2", "Tab3", "Tab4" };
+
     public PagerAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -30,6 +32,12 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 4;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        // Generate title based on item position
+        return tabTitles[position];
     }
 
 }
