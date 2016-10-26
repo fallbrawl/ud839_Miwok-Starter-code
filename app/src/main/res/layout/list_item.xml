@@ -12,7 +12,8 @@
         />
     <LinearLayout
         style="@style/ListTextsStyle"
-        android:background="@color/category_numbers">
+        android:id="@+id/bothTexts"
+        >
         <TextView
             style="@style/ListTextTranslationStyle"
             android:id="@+id/miwok_text_view"

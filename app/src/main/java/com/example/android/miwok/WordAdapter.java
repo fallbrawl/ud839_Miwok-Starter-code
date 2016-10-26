@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,8 +17,11 @@ import java.util.ArrayList;
  */
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    public WordAdapter(Activity context, ArrayList<Word> Words) {
+    private int colorId = 0;
+
+    public WordAdapter(Activity context, ArrayList<Word> Words, int colorId) {
         super(context, 0, Words);
+        this.colorId = colorId;
     }
 
     @Override
@@ -46,6 +50,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the Default translation from the current Word object and
         // set this text on the default TextView
         defaultTextView.setText(currentWord.getDefaultranslation());
+
+        LinearLayout texts = (LinearLayout) listItemView.findViewById(R.id.bothTexts);
+        texts.setBackgroundColor(colorId);
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
